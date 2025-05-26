@@ -35,7 +35,7 @@ public class UI_Input_ButtonGroupController : MonoBehaviour
         selectedButton = button; // 设置为选中的按钮
         Debug.Log("Selected button: " + button.name); // 记录选中状态
         // 使用静态类设置当前选中的按钮
-        UI_Static_GetAndUse.SetSelectedButton(button);
+        UI_Input_Data.SetSelectedButton(button);
 
     }
 

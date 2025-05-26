@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/People_Money.unity
+    guid: ab3e4e42cc07de44fb289b0799e479c6
   m_configObjects: {}

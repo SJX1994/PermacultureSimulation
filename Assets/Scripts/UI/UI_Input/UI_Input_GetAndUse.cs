@@ -15,7 +15,7 @@ public class UI_Input_GetAndUse : MonoBehaviour
     {
         Button_Get.onClick.AddListener(() => OnButtonClicked(ActionType.Get));
         Button_Use.onClick.AddListener(() => OnButtonClicked(ActionType.Use));
-        UI_Static_GetAndUse.OnButtonSelected += UpdateUI;
+        UI_Input_Data.OnButtonSelected += UpdateUI;
         if (system_Player_Trade == null)
         {
             system_Player_Trade = GameObject.FindObjectOfType<System_Player_Trade>();
@@ -23,12 +23,12 @@ public class UI_Input_GetAndUse : MonoBehaviour
     }
     void OnDestroy()
     {
-        UI_Static_GetAndUse.OnButtonSelected += UpdateUI;
+        UI_Input_Data.OnButtonSelected -= UpdateUI;
     }
     void OnButtonClicked(ActionType type)
     {
         this.type = type;
-        Button currentButton = UI_Static_GetAndUse.GetSelectedButton();
+        Button currentButton = UI_Input_Data.GetSelectedButton();
         if (currentButton == null) return;
         Debug.Log(currentButton.name);
         switch (type)
